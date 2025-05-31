@@ -73,7 +73,7 @@ jobs:
       - name: 6. Verify Deployment
         run: |
           echo "Waiting for deployment to be ready..."
-          kubectl rollout status deployment/car-co2-deployment  --timeout=120s 
+          kubectl rollout status deployment/diabetes-prediction-deployment  --timeout=120s 
           echo -e "\n--- Pod Status ---"
           kubectl get pods
           echo -e "\n--- Service Status ---"

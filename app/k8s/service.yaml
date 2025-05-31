@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: diabetes-prediction-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: diabetes-prediction
   ports:
-  - port: 5000
-    targetPort: 5000
-    nodePort: 30007
+    - protocol: TCP
+      port: 80 
+      targetPort: 5000
