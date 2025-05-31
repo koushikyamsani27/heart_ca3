@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: diabetes-prediction-deployment 
+spec:
+  replicas: 2 
+  selector:
+    matchLabels:
+      app: car
+  template:
+    metadata:
+      labels:
+        app: car
+    spec:
+      containers:
+      - name: car-co2
+        image: l00187733/heart:latest
+        ports:
+        - containerPort: 5000

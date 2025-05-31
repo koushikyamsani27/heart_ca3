@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: diabetes-prediction-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: diabetes-prediction
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
